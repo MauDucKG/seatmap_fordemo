@@ -1,0 +1,53 @@
+.sm_row_grid {
+    margin-bottom: 20px;
+}
+.sm_col_grid {
+    color: #6A6D9E;
+    margin-right: 20px;
+}
+.button_save {
+    padding-top: 35px;
+}
+.error_init_map {
+    margin-left: 10%;
+    color: red;
+    font-size: 90%;
+}
+.button_common {
+    background: #554DDE;
+    border: 1px solid #554DDE;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    text-decoration:none;
+    transition: all 0.5s;
+}
+.button_common:hover {
+    background-color: #FFFFFF;
+    background-position: 0 0;
+    color: #554DDE;
+    transform: scale(1.04);
+}
+.button_common:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+

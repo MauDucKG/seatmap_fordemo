@@ -1,0 +1,498 @@
+.react-grid-layout {
+  position: relative;
+  transition: height 200ms ease;
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top;
+}
+
+.react-grid-item img {
+  pointer-events: none;
+  user-select: none;
+}
+
+.react-grid-item.resizing {
+  /* 1 */
+  z-index: 1;
+  will-change: width, height;
+  background-color: red;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  /* 3 */
+  z-index: 3;
+  will-change: transform;
+}
+
+.react-grid-item.dropping {
+  visibility: hidden;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: #554DDE;
+  border-radius: 10px;
+  opacity: 0.2;
+  transition-duration: 100ms;
+  /* 2 */
+  z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.react-grid-item>.react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.react-grid-item>.react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.react-resizable-hide>.react-resizable-handle {
+  display: none;
+}
+
+.react-grid-item>.react-resizable-handle.react-resizable-handle-sw {
+  bottom: 0;
+  left: 0;
+  cursor: sw-resize;
+  transform: rotate(90deg);
+}
+
+.react-grid-item>.react-resizable-handle.react-resizable-handle-se {
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.react-grid-item>.react-resizable-handle.react-resizable-handle-nw {
+  top: 0;
+  left: 0;
+  cursor: nw-resize;
+  transform: rotate(180deg);
+}
+
+.react-grid-item>.react-resizable-handle.react-resizable-handle-ne {
+  top: 0;
+  right: 0;
+  cursor: ne-resize;
+  transform: rotate(270deg);
+}
+
+.react-grid-item>.react-resizable-handle.react-resizable-handle-w,
+.react-grid-item>.react-resizable-handle.react-resizable-handle-e {
+  top: 50%;
+  margin-top: -10px;
+  cursor: ew-resize;
+}
+
+.react-grid-item>.react-resizable-handle.react-resizable-handle-w {
+  left: 0;
+  transform: rotate(135deg);
+}
+
+.react-grid-item>.react-resizable-handle.react-resizable-handle-e {
+  right: 0;
+  transform: rotate(315deg);
+}
+
+.react-grid-item>.react-resizable-handle.react-resizable-handle-n,
+.react-grid-item>.react-resizable-handle.react-resizable-handle-s {
+  left: 50%;
+  margin-left: -10px;
+  cursor: ns-resize;
+}
+
+.react-grid-item>.react-resizable-handle.react-resizable-handle-n {
+  top: 0;
+  transform: rotate(225deg);
+}
+
+.react-grid-item>.react-resizable-handle.react-resizable-handle-s {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+/* body {
+  padding: 20px;
+} */
+#content {
+  width: 50%;
+}
+
+.react-grid-layout {
+  background: #eee;
+  /* margin-top: 10px; */
+}
+
+.layoutJSON {
+  background: #ddd;
+  border: 1px solid black;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.columns {
+  -moz-columns: 120px;
+  -webkit-columns: 120px;
+  columns: 120px;
+}
+
+.react-grid-item {
+  box-sizing: border-box;
+}
+
+.react-grid-item:not(.react-grid-placeholder) {
+  background: greenyellow;
+}
+
+.react-grid-item.resizing {
+  opacity: 0.9;
+}
+
+.react-grid-item.static {
+  background: #cce;
+  border: none;
+  background-color: #eee;
+  text-align: center;
+  vertical-align: middle;
+  color: gray;
+  border-radius: 20px;
+}
+
+.react-grid-item .move_seat {
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  border-radius: 20px;
+  height: 24px;
+}
+
+.react-grid-item .minMax {
+  font-size: 12px;
+}
+
+.react-grid-item .add {
+  cursor: pointer;
+}
+
+.react-grid-dragHandleExample {
+  cursor: move;
+  /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.toolbox {
+  background-color: #dfd;
+  width: 100%;
+  height: 120px;
+  overflow: scroll;
+}
+
+.hide-button {
+  cursor: pointer;
+  position: absolute;
+  font-size: 20px;
+  top: 0px;
+  right: 5px;
+}
+
+.toolbox__title {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.toolbox__items {
+  display: block;
+}
+
+.toolbox__items__item {
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  margin: 5px;
+  border: 1px solid black;
+  background-color: #ddd;
+}
+
+.droppable-element {
+  text-align: center;
+  background: white;
+  color: #6A6D9E;
+  border: 1px solid black;
+  border-radius: 10px;
+  border: 5px solid #6A6D9E;
+  font-weight: 550;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.droppable-element:hover {
+  transform: scale(1.05);
+}
+
+.droppable-element:hover .icon_drag {
+  transform: scale(1.05);
+}
+
+.icon_drag {
+  transition: all .3s;
+}
+
+.icon_close {
+  transition: all .3s;
+  margin-top: auto;
+}
+
+.icon_close:hover {
+  transform: scale(1.1);
+}
+
+.remove {
+  position: absolute;
+  right: 2px;
+  top: -4px;
+  cursor: pointer;
+}
+
+/* ***************************************************************************************** */
+/* ************************************DROP AREA******************************************** */
+/* ***************************************************************************************** */
+.color_tag {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.color_department {
+  display: inline-block;
+  border-radius: 5px;
+  color: black;
+  text-transform: uppercase;
+  margin-right: 40px;
+  font-weight: 550;
+  width: 30px;
+  height: 18px;
+}
+
+.drop_item {
+  color: white;
+}
+
+.container_seat {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.name_seat_added {
+  font-size: 1.1vw;
+  color: white;
+  position: absolute;
+  bottom: 3px;
+  left: -13px;
+}
+
+.name_seat_added-user {
+  font-size: 1.0vw;
+  color: white;
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.sticky {
+  position: sticky;
+  top: 20px;
+
+}
+
+.name_seat_added-user:hover {
+  overflow: visible;
+}
+
+#dropdown-custom {
+  color: white;
+  height: 20px;
+  margin-top: 5px;
+  display: block;
+}
+
+.sm_row_grid {
+  margin-bottom: 20px;
+}
+
+.sm_col_grid {
+  color: #6A6D9E;
+  margin-right: 20px;
+}
+
+.button_save {
+  padding-top: 10px;
+}
+
+.info_max_seat {
+  font-weight: 550;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: solid 4px #6A6D9E;
+  color: #F44E77;
+}
+
+.name_of_map {
+  font-size: 20px;
+  color: rgb(0, 0, 0) !important;
+  font-weight: 500;
+  text-align: center;
+  margin-left: 2%;
+}
+
+.drop_menuCss {
+  max-height: 363px;
+  width: 300px;
+  overflow-y: scroll;
+  height: 400px
+}
+
+btn-check:focus+.btn,
+.btn:focus {
+  box-shadow: 0 0 !important;
+  border: none;
+}
+
+.map_styled_updating {
+  width: 100%;
+  border: solid #6A6D9E;
+  border-radius: 10px;
+  background-color: #6A6D9E;
+  padding: 5px;
+}
+
+
+.button_common {
+  background: #554DDE;
+  border: 1px solid #554DDE;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.button_common:hover {
+  background-color: #FFFFFF;
+  background-position: 0 0;
+  color: #554DDE;
+  transform: scale(1.04);
+}
+
+.button_common:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.employee_list {
+  margin-top: 20px;
+  background: #F44E77;
+  border: 1px solid #F44E77;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.employee_list:hover {
+  background-color: #FFFFFF;
+  background-position: 0 0;
+  color: #F44E77;
+  transform: scale(1.04);
+}
+
+.employee_list:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.drop_down_table {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 3px solid #6A6D9E;
+  max-width: 90px;
+  max-height: 90px;
+}
+
+.is_valid_field {
+  color: red;
+}

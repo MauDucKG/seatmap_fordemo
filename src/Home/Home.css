@@ -1,0 +1,169 @@
+.logo{
+    border-radius: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 270px;
+}
+.heading-main-box{
+    margin-top: 10px; 
+    padding-left: 10px;
+    padding-top: 70px;    
+}
+.header_logo {
+    background-image: linear-gradient(rgb(200, 193, 7, 0.55), rgba(45,95,93, 0.85)), url("https://img.freepik.com/free-vector/coworking-space-interior-empty-office-business-center-with-computer-desks_107791-3948.jpg?w=2000");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;                          
+    background-attachment: fixed;
+    border-radius: 5px;
+}
+.say_hello {
+    text-transform: uppercase;                
+    font-size: 300%;
+    font-weight: 500;
+    letter-spacing: 10px;
+    word-spacing: 5px;
+    color: white;
+    line-height: 135%;
+    margin-bottom: 50px;
+}
+.title_part {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffc107;
+    font-size: 180%;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+}
+.title_part::after{
+    content: " ";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: rgb(255, 193, 7, 0.5);
+    margin: 0 auto;
+}
+.p-long {
+    color: rgb(38,80,119);
+    font-size: 22px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 70%;
+    margin-left: 15%;
+    line-height: 140%;
+}
+.about-picture img{
+    width: 90%;
+    border-radius: 20px;
+    border: 4px solid #ffc107;
+    box-shadow: 0px 5px 15px 5px #FFCE3D;
+    transform: all 5s;
+}
+.about-picture{
+    position: relative;
+    margin-top: 10px;
+}
+.picture-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #c2e1fd;
+    transform: translate(-65%, 100%);
+    opacity: 0;                                                            
+    transition: all 1s;                                                            
+}
+.about-picture:hover .picture-title,
+.about-picture:active .picture-title{
+    transform: translate(-65%, -50%);
+    opacity: 1;
+}
+.about-picture:hover img,
+.about-picture:active img{
+    filter: brightness(50%) blur(2px);                        
+}
+
+.sponsors-section{
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+.sponsors-section h2{
+    margin-bottom: 50px;
+}
+
+.sponsors-showcase{
+    margin-left: 2%;
+    margin-bottom: 15px;
+}
+.sponsors-showcase li{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.logo-sponsor{
+    width: 140px;
+    margin-left: 10px;
+    transition: all .3s;
+    border-radius: 10px;
+    height: 140px;
+}
+figcaption{
+    color: #265077;
+    font-weight: 900;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+.sponsors-showcase li .logo-sponsor:hover,
+.sponsors-showcase li .logo-sponsor:active{
+    transform: scale(1.1);
+}
+
+.contact-section{
+    background-image: linear-gradient(rgb(200, 193, 7, 0.55), rgba(45,95,93, 0.85)), url(./Image/footer.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    border-radius: 5px;
+}
+.information{
+    list-style: none;
+    color: white;
+    line-height: 200%;
+    margin-top: 70px;
+    word-spacing: 1px;
+    font-size: 95%;
+}
+.information .small-icon{
+    color: #427db4;
+    transition: all 0.7s;
+}
+.information .small-icon:hover,
+.information .small-icon:active{
+    transform: scale(1.3);
+}
+.social-icon{
+    margin-top: 50px;
+    list-style: none;
+}
+.social-icon li{
+    display: inline-block;
+    font-size: 250%;
+    margin-left: 20px;
+    color: white;
+}
+.social-icon li i{
+    transition: all .3s;
+    cursor: pointer;
+}
+.social-icon li i:hover,
+.social-icon li i:active{
+    transform: scale(1.3);
+    color: #d35400;
+}
+

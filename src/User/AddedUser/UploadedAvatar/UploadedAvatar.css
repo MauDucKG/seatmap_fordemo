@@ -1,0 +1,11 @@
+#file {
+    display: none;
+}
+.btn_change_image {
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 12px;
+    background-color: #eee;
+    border: 2px solid black; 
+}

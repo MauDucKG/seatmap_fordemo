@@ -1,0 +1,73 @@
+.empty_listmap {
+    font-size: 40px;
+    font-style: oblique;
+    color: white;
+    text-align: center;
+}
+.remove_map {
+    position: relative;
+    top: -140px;
+    right: -115px;
+    color: white;
+    font-size: 22px;
+    transition: all 0.3s;
+}
+.remove_map:hover {
+    color: #F44E77;
+}
+.iconMap {
+    vertical-align: middle;
+    color: white;
+}
+.title_manager_map {
+    font-size: 1.5em;
+    padding-left: 30px;
+    color: white;
+    background-color: #9496BB;
+    padding: 10px 10px ;
+    border-bottom: groove 7px ;
+    border-bottom-right-radius: 20px;
+    font-weight: 550;
+}
+.map_styled {
+    width: 100%;
+    border: solid #6A6D9E;
+    border-radius: 20px;
+    background-color: #6A6D9E;
+    padding: 10px;
+}
+.container_image {
+    background-color: #6A6D9E;
+    margin: 30px;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    cursor: pointer;
+    border: 4px solid #16194F;
+    border-radius: 10px;
+    transition: all 0.3s;
+    padding: 5px 5px;
+}
+.container_image:hover {
+    transform: scale(1.05);
+    background-color: #2C2F6A;
+}
+.container_image:hover img {
+    transform: scale(1.05);
+}
+.image_list {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.4s;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+.name_of_map_list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 15.5px !important;
+    font-weight: 550 !important;
+    color: #6A6D9E !important;
+}

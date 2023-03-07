@@ -1,0 +1,89 @@
+.popup-add-employee{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #69696980;
+    display: flex;
+    z-index: 9;
+    align-items: center;
+    justify-items: center;
+}
+
+.popup-add-employee_container{
+    width: 50%;
+    height: 55%;
+    background-color: #fff;
+    margin: auto auto;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popup-add-employee_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.popup-add-employee_header h1 {
+    margin-left: 32px;
+}
+
+.popup-add-employee_body{
+    display: flex;
+}
+.popup-add-employee_avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 32px;
+    flex: 1;
+}
+.popup-add-employee_avatar img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+}
+
+.popup-add-employee_avatar button{
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.popup-add-employee_infomation{
+    margin-left: 10%;
+    flex: 2;
+}
+
+.popup-add-employee_infomation select{ 
+    display: block;
+    width: 80%;
+    height: 36px;
+    margin-bottom: 12px;
+}
+
+.popup-add-employee_infomation .message-error{
+    margin: 4px 0;
+    color: red;
+    height: 20px;
+}
+
+.popup-add-employee_footer button {
+    font-size: 1rem;
+    min-width: 100px;
+    padding: 8px 0;
+    margin-bottom: 12px;
+    float: right;
+}
+
+.popup-add-employee_footer .btn-save,
+.popup-add-employee_footer .btn-cancel{
+    margin-right: 32px;
+    border-radius: 12px;
+}
